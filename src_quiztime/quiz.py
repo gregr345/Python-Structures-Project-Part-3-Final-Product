@@ -27,6 +27,7 @@ print(GrayishColorCode + "Welcome to the best quiz ever." + NilColorCode)
 print(GrayishColorCode + "For these first easy questions type A, B, C, or D to answer." + NilColorCode)
 print("")
 questions = [
+
     ("What is the capital of Sweden?",
      ["A) Berlin", "B) Tuesday", "C) Paris", "D) Stockholm"],
      "D"),
@@ -51,6 +52,23 @@ questions = [
      [""],
      "WHITE"),
 
+    ("What follows december 24th?",
+     [""],
+     "T"),
+
+   ("I have a neck, but no head. I have two arms, but no hands. What am I?",
+     ["A) A shirt", "B) A robot", "C) Dead", "D) Crippled"],
+     "A"),
+
+    ("David's father has three sons: Snap, Crackle and _____?",
+     ["A) Pop", "B) Jimmy", "C) David", "D) John F. Kennedy"],
+     "A"),
+
+    ("Which fish costs the most?",
+     ["A) Bluefin Tuna", "B) Platinum Arowana", "C) Goldfish", "D) Pufferfish"],
+     "C")
+
+
      
 ]
 
@@ -61,7 +79,7 @@ for question, options, correct_answer in questions:
     answer = input("Your answer: ").upper()
 
     if answer == correct_answer:
-        score += 1
+        score = score + 1
         clearconsole()
         print(GreenColorCode + "Correct!!!" + NilColorCode)
     else:
@@ -71,7 +89,7 @@ for question, options, correct_answer in questions:
 print("Quiz finished!")
 
 
-if score <= 5:
+if score <= 5 and score != 0:
     print(RedColorCode + "Your grade:", score, "out of", len(questions),
           "You get an F for FAILURE!")
 
@@ -86,3 +104,7 @@ if score == 9:
 if score == 10:
     print(GreenColorCode + "Your grade:", score, "out of", len(questions),
           "Great job, you've truly impressed me.")
+    
+if score == 0:
+    print(RedColorCode + "Your grade:", score, "out of", len(questions),
+          "wow you just straight up didn't try lol")
