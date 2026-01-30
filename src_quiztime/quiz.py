@@ -16,7 +16,7 @@ def clearconsole():
 
     return
 
-
+    #defines the colors
 RedColorCode = '\033[31m'
 GreenColorCode = '\033[32m'
 NilColorCode = '\033[0m'
@@ -27,7 +27,7 @@ print(GrayishColorCode + "Welcome to the best quiz ever." + NilColorCode)
 print(GrayishColorCode + "For these first easy questions type A, B, C, or D to answer." + NilColorCode)
 print("")
 questions = [
-
+    #table with all questions and answers
     ("What is the capital of Sweden?",
      ["A) Berlin", "B) Tuesday", "C) Paris", "D) Stockholm"],
      "D"),
@@ -67,11 +67,8 @@ questions = [
     ("Which fish costs the most?",
      ["A) Bluefin Tuna", "B) Platinum Arowana", "C) Goldfish", "D) Pufferfish"],
      "C")
-
-
-     
 ]
-
+#check if answer is correct
 for question, options, correct_answer in questions:
     print(question)
     for option in options:
@@ -88,7 +85,7 @@ for question, options, correct_answer in questions:
 
 print("Quiz finished!")
 
-
+#return score
 if score <= 5 and score != 0:
     print(RedColorCode + "Your grade:", score, "out of", len(questions),
           "You get an F for FAILURE!")
