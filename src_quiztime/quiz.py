@@ -91,6 +91,7 @@ for question, options, correct_answer in questions:
         print(RedColorCode + "WRONG! The correct answer is", correct_answer + NilColorCode)
 
 print("Quiz finished!")
+FirstTimePlaying = False
 
 
 if score <= 5 and score != 0:
